@@ -3,8 +3,13 @@ t = True
 f = False
 n = None    # 다른 언어의  null 값과 유사
 
-
-
+hungry = True
+sleepy = False
+print(not hungry) #False
+print(hungry and sleepy) #False
+print(hungry or sleepy) #True
+print(hungry & sleepy) #False
+print(hungry | sleepy) #True
 
 
 """
@@ -20,17 +25,54 @@ n = None    # 다른 언어의  null 값과 유사
                     0                      False
                     None                   False
 
-
-if('아'):
+"""
+if'아':
     print('True')
 else:
     print('False')
+    #True
 
-if([]):
+if[]:
     print('True2')
 else:
     print('False2')
-"""
+    #False2
+
+if 0:
+    print('True3')
+else:
+    print('False3')
+    # False3
+
+if -1:
+    print('True4')
+else:
+    print('False4')
+    #True4
+
+msg = '행복합시다'
+if msg.find('행'):  # 행은 첫번째 글짜로 0번째 인덱스이기에 0값이므로 false
+    print('ok')
+else:
+    print('no')
+
+if msg.find('가'): # 가는 없기에 -1을 나타내기에 0이아닌 숫자이기에 True
+    print('ok')
+else:
+    print('no')
+
+print(msg.find('복'))
+
+if '행' in msg:
+    print('ok')
+else:
+    print('no')
+
+if (msg.find('행') == 0):
+    print('ok')
+else:
+    print('no')
+
 
 
 
