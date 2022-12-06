@@ -6,7 +6,7 @@
     [ex]
     if a>b:
         print(a)
-            print(b)  => 에러발생
+        print(b)  // 줄 맞출 것!
 
     (1) if 문
         if 조건식A :
@@ -24,20 +24,43 @@
 
 # 거짓(False)의 값
 i = 0;
-i2=0.0
-i3=""
-i4=str()
-i5=list()
-i6=tuple()
-i7=set()
-i8=dict()
-i9={}
-i10=None
+i2 = 0.0
+i3 = ""
+i4 = str()
+i5 = list()
+i6 = tuple()
+i7 = set()
+i8 = dict()
+i9 = {}
+i10 = None
 
+a = -1
+if a:
+    print('True')
+else:
+    print('False')
 
+a = 1
+b = 0.1
+if a and b:
+    print('True2')
+else:
+    print('False2')
 
+if a or b:
+    print('True3')
 
+print(a and b)  #
+print(a or b)  #
 
-
-
-
+print("======================================================================================")
+a = 0
+b = 0
+if a:
+    c = 2
+elif b:
+    c = 4
+else:
+    c = 6
+    print(c)
+print(c)

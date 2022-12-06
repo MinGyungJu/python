@@ -38,21 +38,54 @@ print(alist)
 #------------------------------------------------
 # 리스트 컨프리핸션
 
+blist = [ n for n in range(1,7)]
+print(blist)
 
-#-------------------------------------------
-# 딕셔러니 컨프리핸션
+blist = [ n**2 for n in range(1,7)]
+print(blist)
 
+blist = [ n for n in range(1,7) if n%2==1]
+print(blist)
+
+# 컨프리핸션 아닌 코드를 컨프리핸션으로 변경
+clist = []
+for r in range(1,4): # [1,2,3]
+    for c in range(1,3): #[1,2]
+        clist.append( (r,c) )
+print(clist)
+
+dlist = [ (r,c) for r in range(1,4) for c in range(1,3) ]
+print(dlist)
 
 
 #------------------------------------------------
 # 셋 컨프리핸션
 
+data = (1,2,3,2,1,4,5)
+alist = [n for n in data]
+print(alist)
+
+bset = {n for n in data}
+print(bset)
+
+#-------------------------------------------
+# 딕셔러니 컨프리핸션
+data = (2,3,4)
+adic = { n : n**2 for n in data}
+print(adic)
+
+word = "LOVE LOL"
+wcnt = {letter : word.count(letter) for letter in word}
+wcnt1 = { n : word.count(n) for n in word }
+wcnt2 = {letter : word.count(letter) for letter in set(word)}
+print(wcnt)
+print(wcnt1)
+print(wcnt2)
 
 
 
 
 
-'''
 #------------------------------------------------
 # 프로젝트할 때 팀구호
 우리의결의= """취하고싶으면달려라
@@ -62,7 +95,7 @@ print(alist)
 
 result = [ j[i*2] for i, j in enumerate(우리의결의.splitlines())]
 print(result)
-'''
+
 
 
 

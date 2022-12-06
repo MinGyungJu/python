@@ -9,11 +9,41 @@ def case2():
 def case3():
     print('case-3')
 
+f = { 'a1' : case1(),
+      'a2' : case2(),
+      'a3' : case3() }
+print(f['a2'])
+
+
+byunsu = 'a3'
+#f[byunsu]()
 
 
 #---------------------------------------
 # 글로벌 변수와 지역변수
+#(1)
+# temp = '글로벌'
+# def func():
+#     print('1>',temp)
+# func()
+# print('2>',temp)
 
+#(2)
+# temp = '글로벌'
+# def func():
+#     #print('0>',temp)    # 값이 아직 지정되지않음, 자바스크립트는 undefined나왔음
+#     temp = '지역'
+#     print('1>',temp)    # 지역
+# func()
+# print('2>',temp)        # 글로벌
+
+#(3)
+temp = '글로벌'
+def func():
+    temp = '지역'
+    print('1>',temp)    # 지역
+func()
+print('2>',temp)        # 글로벌
 
 
 '''
@@ -41,8 +71,14 @@ def case3():
     
     파이썬 2.x에서는 많이 사용하던 함수이지만, 최근 문법의 복잡성으로 권장하지 않는 추세란다.
 """
+def calc(x):
+    return x*2
+data = [1,2,3,4,5]
+res = list(map(calc, data))
+print(res)
+print(map(calc, data))
 
-
+#
 
 
 

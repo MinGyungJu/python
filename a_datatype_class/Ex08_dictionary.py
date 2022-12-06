@@ -47,3 +47,26 @@ print(dt2[1])
 
 
 # Key와 Value만 따로 검색
+
+list_1 = [[1, 2], [3], [4, 5, 6]]
+
+a,b,c = list_1
+print(a)
+print(b)
+print(c)
+
+list_2 = a + b + c
+
+print(list_2)
+
+list_a = ['Hankook', 'University', 'is', 'an', 'academic', 'institute', 'located', 'in', 'South Korea']
+
+list_b = []
+
+for i in range(len(list_a)):
+
+    if i % 2 != 1:
+
+        list_b.append(list_a[i])
+
+print(list_b)
