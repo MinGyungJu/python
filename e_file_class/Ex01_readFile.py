@@ -17,4 +17,32 @@
 
     - 파일을 열고 사용 후에는 반드시 닫아야 한다
 """
+# try:
+#     f = open('./data/data.txt','r',encoding='utf-8')
+# except FileNotFoundError as e:
+#     print('파일을 찾을수 없습니다 >',e)
+# else:
+#     while True:
+#         line = f.readline()
+#         if not line:break
+#         print(line)
+#     f.close()
+# finally:
+#     print('종료')
 
+# 자동으로 close(0) 하기위해 with 구문
+
+# with open('data/data.txt','r',encoding='utf-8') as f:
+#     while True:
+#         line = f.readline()
+#         if not line:break
+#         print(line)
+
+fileName = './data/' + 'data.txt'
+with open(fileName, 'r', encoding='utf-8') as f:
+    content = f.read()  # 전체 통으로 읽음
+    words = content.split()  # 잘라서 words에 담기
+
+print('총단어수 : ', len(words))
+
+print('총 단어수 : ', len(words))
